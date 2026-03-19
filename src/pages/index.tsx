@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Button } from "@/Components/ui/button";
+import { Header } from "@/Components/Header/";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div className= "min-h-screen mix-w-full bg-slate-500 ">
-      <h2 className= "text=4xl text-red-400">Hello World</h2>
-    <Button className= "text-red-950 bg-lime-600 rounded-4xl w-max h-max rounded-2xl" >Bofaofna</Button>
+    <div className={`${geistSans.variable} ${geistMono.variable}grid grid-row-[20px_1rf_20px] items-center justify-items-center min h-screen p-8
+    pb-20gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
+      <Header/>
     </div>
   );
 }
